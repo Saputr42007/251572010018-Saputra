@@ -1,6 +1,20 @@
 services:
   web:
-    build: .
-    container_name: web-profile
+    build:
+      context: .
+      args:
+        ORG_NAME: "DRAMAGA BOXING COMMUNITY"
+        ORG_TAGLINE: "Strength, Discipline, Brotherhood"
+        ORG_MISSION: "Membina kemampuan tinju, meningkatkan disiplin, sportivitas, dan solidaritas anggota melalui latihan yang terarah dan kegiatan positif."
+        ORG_VISION: "Menjadi komunitas tinju yang berprestasi, solid, dan menjadi wadah pengembangan atlet serta pecinta olahraga tinju di wilayah Dramaga."
+        ORG_FOUNDED: "2024"
+        ORG_MEMBERS: "45+"
+        ORG_DIVISION: "4"
+        ORG_EMAIL: "dramagaboxingcommunity@gmail.com"
+        ORG_LOCATION: "Dramaga, Bogor"
+
+    image: soal-1b-web
+    container_name: soal-1b-web
+
     ports:
       - "8083:80"
